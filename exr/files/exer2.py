@@ -1,7 +1,7 @@
 #Anoigma tou arxeiou num.txt kai eggrafh twn artiwn ari8mwn pou plhktrologeite, enan se ka8e grammi
 f=open("num.txt","w")
 a=raw_input("Dose ari8mo - 0 gia termatismo")
-while a!=0:
+while a!="0":
 	f.write(a)
 	f.write("\n")
 	a=raw_input("Dose ari8mo - 0 gia termatismo")
