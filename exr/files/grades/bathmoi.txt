@@ -1,0 +1,6 @@
+Maria,18
+Ioannis,15
+Aris,19
+Eleni,14
+Alex,17
+Katerina,16
