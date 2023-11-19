@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 def enqueue(queue, item) :
     queue = queue.append( item )
 def dequeue(queue) :
@@ -7,7 +9,7 @@ def isEmpty(queue) :
 def createQueue( ) :
     return [ ]
 
-OUE = createQueue()
+QUE = createQueue()
 ar_vagoniwn = int(input('Δώσε αριθμό βαγονιών: '))
 
 ogos = input('Δώστε όγκο κιβωτίου ή μηδέν για τερματισμό: ')
@@ -25,15 +27,18 @@ while not isEmpty(QUE) and count_vag <= ar_vagoniwn:
         plithos_kivotiwn += 1
         sum_ogos += kivotio
         sum_ogos_all += kivotio
+        print sum_ogos, '----', sum_ogos_all, '------', plithos_kivotiwn
     else:
         print 'Στο βαγόνι ', count_vag, ' φορτώθηκαν ', plithos_kivotiwn, ' με συνολικό όγκο ', sum_ogos
-        if count_vag < ar_vagoniwn:
+        count_vag += 1
+        if count_vag <= ar_vagoniwn:
             sum_ogos = kivotio
             sum_ogos_all += kivotio
             plithos_kivotiwn = 1
-            count_vag += 1
+            print sum_ogos, '----', sum_ogos_all, '------', plithos_kivotiwn
         else:
             enqueue(QUE, kivotio)
+            print 'enqueue'
 
 if isEmpty(QUE):
     print 'Στο βαγόνι ', count_vag, ' φορτώθηκαν ', plithos_kivotiwn, ' με συνολικό όγκο ', sum_ogos
