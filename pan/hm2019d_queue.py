@@ -27,7 +27,6 @@ while not isEmpty(QUE) and count_vag <= ar_vagoniwn:
         plithos_kivotiwn += 1
         sum_ogos += kivotio
         sum_ogos_all += kivotio
-        print sum_ogos, '----', sum_ogos_all, '------', plithos_kivotiwn
     else:
         print 'Στο βαγόνι ', count_vag, ' φορτώθηκαν ', plithos_kivotiwn, ' με συνολικό όγκο ', sum_ogos
         count_vag += 1
@@ -35,7 +34,6 @@ while not isEmpty(QUE) and count_vag <= ar_vagoniwn:
             sum_ogos = kivotio
             sum_ogos_all += kivotio
             plithos_kivotiwn = 1
-            print sum_ogos, '----', sum_ogos_all, '------', plithos_kivotiwn
         else:
             enqueue(QUE, kivotio)
             print 'enqueue'
